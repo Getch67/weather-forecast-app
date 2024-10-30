@@ -11,6 +11,13 @@
 * Autoprefixer: v10.4.7
 * Browsers: last 4 version
 */
+:root {
+  --primary-color: #5151E5;
+  --background-gradient-start: #72EDF2;
+  --background-gradient-end: #5151E5;
+  --text-color: #333;
+  --gray-color: #718096;
+}
 
 * {
   margin: 0;
@@ -21,9 +28,9 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: -o-linear-gradient(315deg, #72EDF2 10%, #5151E5 100%);
-  background: linear-gradient(135deg, #72EDF2 10%, #5151E5 100%);
-  color: #333;
+  background: -o-linear-gradient(315deg, var(--background-gradient-start) 10%, var(--background-gradient-end) 100%);
+  background: linear-gradient(135deg, var(--background-gradient-start) 10%, var(--background-gradient-end) 100%);
+  color: var(--text-color);
   line-height: 1.6;
   min-height: 100vh;
   display: -webkit-box;
@@ -35,6 +42,14 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+#errorMessage {
+  display: none;
+  position: absolute;
+  color: red;
+  bottom: -70%;
+  left: 10%;
 }
 
 .container {
@@ -93,7 +108,7 @@ h1 {
 }
 
 header p {
-  color: #718096;
+  color: var(--gray-color);
 }
 
 .search-section {
@@ -102,6 +117,7 @@ header p {
   display: flex;
   gap: 0.5rem;
   margin-bottom: 2rem;
+  position: relative;
 }
 
 input[type="text"] {
@@ -119,11 +135,11 @@ input[type="text"] {
 
 input[type="text"]:focus {
   outline: none;
-  border-color: #5151E5;
+  border-color: var(--primary-color);
 }
 
 button {
-  background-color: #5151E5;
+  background-color: var(--primary-color);
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -211,7 +227,7 @@ button:hover {
 }
 
 .weather-icon i {
-  color: #5151E5;
+  color: var(--primary-color);
 }
 
 #temperature {
@@ -222,7 +238,7 @@ button:hover {
 
 #description {
   text-transform: capitalize;
-  color: #718096;
+  color: var(--gray-color);
 }
 
 .weather-details {
@@ -249,14 +265,14 @@ button:hover {
 
 .detail i {
   font-size: 1.5rem;
-  color: #5151E5;
+  color: var(--primary-color);
   margin-bottom: 0.5rem;
 }
 
 footer {
   text-align: center;
   margin-top: 2rem;
-  color: #718096;
+  color: var(--gray-color);
   font-size: 0.8rem;
 }
 
