@@ -1,7 +1,7 @@
 # Weather Forecast App
 
 A simple, responsive weather forecast web application that provides real-time weather information for any city and automatically fetches the user’s current location on first load using the OpenWeatherMap API and Geolocation API. The app displays temperature, weather conditions, humidity, wind speed, and atmospheric pressure.
-- Live Site URL: https://getch67.github.io/weather-forecast-app/
+- Website: https://getch67.github.io/weather-forecast-app/
 
 ## Table of contents
 
